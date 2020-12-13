@@ -1,0 +1,144 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@media all and (min-width: 0px){
+	.nav1 > ul{
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+		padding: 4rem 0 6rem;
+		margin-top: -2rem;
+	}
+	.nav1 > ul li{
+		padding: 0.5rem 0;
+	 }
+	.nav1 > ul li a{
+		font: 0.9rem/1.25rem var(--primary-font);
+		letter-spacing: 0.14em;
+		color: var(--black);
+	}
+	.hamburger{
+		background: var(--grey);
+		border-radius: 10px;
+		height: 3px;
+		width:  40px;
+		margin: 10px 0 10px 0;
+	}
+	#ham-small{
+		width: 30px;
+		margin-left: auto;
+	}
+	#logodot{
+		color: yellow;
+		font-size: 30px;
+		font-weight: normal;
+	}
+	.ln1{
+		animation: cros 0.5s;
+		transform: rotateZ(40deg);
+		margin-bottom: -0.2rem;
+		width: 25px;
+		margin-left: auto;
+	}
+	.ln2{
+		animation: cross 0.5s;
+		transform: rotateZ(135deg);	
+		margin-top: -0.2rem;
+		width: 25px;
+	}
+	@keyframes cross{
+		from {
+			transform: rotateZ(0deg);
+		}
+		to {
+			transform: rotateZ(135deg);
+		}
+	}
+	@keyframes cros{
+		from {
+			transform: rotateZ(0deg);
+		}
+		to {
+			transform: rotateZ(40deg);
+		}
+	}
+	nav{
+		width: 100%;
+	}
+	nav ul div{
+		width: 100px;
+		height: 2px;
+		background: #C4C4C4;
+	}
+	.navbar{
+		display: flex;
+		padding: 0;
+		width: 85%;
+		margin: auto;
+	}
+	.togglenavbar{
+		margin-left: auto;
+	}
+	.nav,.ln3,.desktop-nav{
+		display: none;
+	}
+	.nav1{
+		display: block;
+	}
+}
+@media all and (min-width: 425px){
+	.nav1 > ul{
+		padding: 6rem 0 8rem;
+	}
+}
+@media all and (min-width: 768px){
+	nav>ul>li{
+		font-size: 1.5rem;
+	}
+}
+@media all and (min-width: 1024px){
+	.desktop-nav{
+		width: 90%;
+		margin: auto;
+		display: flex;
+	}
+	.navbar{
+		display: none;
+	}
+}
+@media all and (min-width: 1440px){
+	.dk-nav > ul{
+		padding-top: 0.5rem;
+	}
+	#mobilenav, .navbar{
+		display: none;
+	}
+	.dk-nav{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+	nav>ul>li{
+		font: 1.125rem/1.5rem  var(--primary-font);
+		font-weight: 100;
+		list-style: none;
+		display: inline-flex;
+		margin: 0 1rem;
+	}
+	.social{
+		z-index: 100;
+	}
+	.des-dev{
+		position: relative;
+		z-index: 100;
+		width: 100%;
+		padding: 0;
+	}
+}
