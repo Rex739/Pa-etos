@@ -7,8 +7,7 @@ import About from './containers/about';
 import Services from './containers/services';
 import Contact from './components/contact';
 import Footer from './components/footer';
-import Post from './components/post';
-import Vacancies from './components/vacancies'
+import Jobs from './components/jobs'
 // css
 // bootstrap
 import './containers/css/bootstrap.min.css';
@@ -58,41 +57,41 @@ class App extends Component{
 				id: 5
 			},
 			{
-				name: 'Michael Doziea',
-				position: 'MD/CEO',
+				name: 'Harrison Etokhana',
+				position: 'Managing Director',
 				image: 'images/team-img2.png',
 				id: 6
 			},
-			{
-				name: 'Samuel Chukwu',
-				position: 'Lead Architect',
-				image: 'images/team-img3.png',
-				id: 7
-			},
-			{
-				name: 'Folake Emmanuel',
-				position: 'Lead Engineer',
-				image: 'images/team-img4.png',
-				id: 8
-			},
-			{
-				name: 'Samuel Chukwu',
-				position: 'Lead Architect',
-				image: 'images/team-img3.png',
-				id: 9
-			},
-			{
-				name: 'Folake Emmanuel',
-				position: 'Lead Engineer',
-				image: 'images/team-img4.png',
-				id: 10
-			},
-			{
-				name: 'Michael Doziea',
-				position: 'MD/CEO',
-				image: 'images/team-img2.png',
-				id: 11
-			},
+			// {
+			// 	name: 'Samuel Chukwu',
+			// 	position: 'Lead Architect',
+			// 	image: 'images/team-img3.png',
+			// 	id: 7
+			// },
+			// {
+			// 	name: 'Folake Emmanuel',
+			// 	position: 'Lead Engineer',
+			// 	image: 'images/team-img4.png',
+			// 	id: 8
+			// },
+			// {
+			// 	name: 'Samuel Chukwu',
+			// 	position: 'Lead Architect',
+			// 	image: 'images/team-img3.png',
+			// 	id: 9
+			// },
+			// {
+			// 	name: 'Folake Emmanuel',
+			// 	position: 'Lead Engineer',
+			// 	image: 'images/team-img4.png',
+			// 	id: 10
+			// },
+			// {
+			// 	name: 'Michael Doziea',
+			// 	position: 'MD/CEO',
+			// 	image: 'images/team-img2.png',
+			// 	id: 11
+			// },
 		],
 
 		Services: [
@@ -186,10 +185,9 @@ class App extends Component{
 					    	render={(props)=>
 					    		(<Services {...props} services={this.state.Services} />)} />
 					    <Route path='/contact' component={Contact} />
-					   	<Route path='/vacancies'
+					   	<Route path='/jobs'
 					 		render={(props)=>
-					 			(<Vacancies {...props} vacancy={this.state.vacancy} />)} />
-					    <Route path='/:post_id' component={Post} />    
+					 			(<Jobs {...props} vacancy={this.state.vacancy} />)} />   
 				      </Switch> 
 				    <Footer />
 			    </div>

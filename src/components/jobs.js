@@ -1,6 +1,7 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
-const Vacancies=({vacancy})=>{
+const Jobs=({vacancy})=>{
 	console.log(vacancy)
 	const jobs =  vacancy.length ? (
 		vacancy.map(vacancies=>{
@@ -15,9 +16,10 @@ const Vacancies=({vacancy})=>{
 		) : (
 			<div className="">
 				<div className="slide-item">
-					<img className="d-block w-100 slide-img" src="images/cover-img1.png" alt="First slide"/>
-					<div class="slide-caption text-left slide1">
-				    	<h2>There are currently no<br /> vacancies.<br /><span>Please check back later.</span></h2>
+					<img className="w-100 slide-img hide-desktop" src="images/cover-img1.png" alt="First slide"/>
+					<img className="w-100 hide-mobile" src="images/mobile-cover-img1.png" alt="First slide"/>
+					<div className="slide-caption text-left slide1">
+				    	<h1>We're always hiring <br /><b><span><Link to ='/contact'>Contact us</Link></span></b></h1>
 				  	</div>
 				</div>
 				
@@ -31,9 +33,4 @@ const Vacancies=({vacancy})=>{
 }
 
 
-export default Vacancies
-
-
-
-
-
+export default Jobs

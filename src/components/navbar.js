@@ -26,17 +26,19 @@ class NavBar extends Component{
 					</div>
 				</div>
 				<nav className={this.state.clicked ? 'nav1': 'nav'}>
-					<ul className="d-flex list-unstyled" onClick={handleClick}>
-						<li className="list-unstyled">
+					<ul className="d-flex list-unstyled">
+						<li className="list-unstyled" onClick={handleClick}>
 							<NavLink exact to="/"><img src="images/logo.svg" alt="company logo" className="logo"/></NavLink>
 						</li>
-						<li><NavLink exact to="/">HOME</NavLink></li>
+						<li onClick={handleClick}><NavLink exact to="/">HOME</NavLink></li>
 						<div></div>
-						<li><NavLink to="/about">ABOUT</NavLink></li>
+						<li onClick={handleClick}><NavLink to="/about">ABOUT</NavLink></li>
 						<div></div>
-						<li><NavLink to="/services">SERVICES</NavLink></li>
+						<li onClick={handleClick}><NavLink to="/services">SERVICES</NavLink></li>
 						<div></div>
-						<li><NavLink to="/contact">CONTACT</NavLink></li>
+						<li onClick={handleClick}><NavLink to="/contact">CONTACT</NavLink></li>
+						<div></div>
+						<li onClick={handleClick}><NavLink to="/jobs">JOBS</NavLink></li>
 						<div></div>
 					</ul>
 				</nav>
@@ -50,6 +52,7 @@ class NavBar extends Component{
 							<li><NavLink to="/about">ABOUT</NavLink></li>
 							<li><NavLink to="/services">SERVICES</NavLink></li>
 							<li><NavLink to="/contact">CONTACT</NavLink></li>
+							<li><NavLink to="/jobs">JOBS</NavLink></li>
 						</ul>
 					</nav>
 				</div>
